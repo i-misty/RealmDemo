@@ -4,19 +4,44 @@ import java.util.UUID;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.RealmClass;
 
 /**
  * Created by user10 on 2017/10/27.
  */
-
+@RealmClass
 public class Person extends RealmObject {
     @PrimaryKey //Realm主键不支持自增长用UUID保持唯一性 ;
-    private long id = UUID.randomUUID().timestamp();
+    private long id ;
     private String name ;
     private int age ;
     private int sex;
     private RealmList<Dog> dogs ;
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", sex=" + sex +
+                ", dogs=" + dogs +
+                ", address='" + address + '\'' +
+                '}';
+    }
+
+    @Ignore
+    private String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public Person() {
     }

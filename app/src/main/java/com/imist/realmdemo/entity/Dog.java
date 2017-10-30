@@ -1,11 +1,12 @@
 package com.imist.realmdemo.entity;
 
 import io.realm.RealmObject;
+import io.realm.annotations.RealmClass;
 
 /**
  * Created by user10 on 2017/10/27.
  */
-
+@RealmClass
 public class Dog extends RealmObject {
     private String name ;
     private int age;
