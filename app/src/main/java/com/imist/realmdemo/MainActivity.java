@@ -27,7 +27,8 @@ import io.realm.RealmResults;
 import io.realm.Sort;
 
 /**
- * http://www.jianshu.com/p/37af717761cc Realm详解
+ * Realm详解
+ * http://www.jianshu.com/p/37af717761cc
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
